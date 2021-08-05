@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr=[
+         1,
+         2,
+         "Hello",
+         {"Col1":21},
+         function(strX){
+             console.log(strX);
+         }
+
+        ];
+
+        var obj =arr[3];  //序號第四筆
+        console.log(obj);
+
+        var fuc =arr[4];//序號第五筆
+        console.log(fuc);
+
+        var obj2 = arr[5];
+        console.log(obj2)  //序號第6筆,不存在,所以會顯示undefined
+
+        arr.push(100);  //可以透過push新增項目至array裡面
+        console.log(arr[5]);
+
+        delete arr[5]; //透過delete刪除項目
+        console.log(arr[5]);
+    </script>
+</body>
+</html>

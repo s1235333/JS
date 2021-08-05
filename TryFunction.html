@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Js內沒有區分function及method
+        //有無回傳值都可以使用function
+
+        //傳統寫法
+        function Get21()
+        {
+            console.log('into Get21');
+            return 21;
+            console.log('Leave Get21');
+        }
+         var val1 = Get21();
+         console.log(val1);
+         
+         function Avoid()
+         {
+            console.log('into Avoid');
+            return;
+            console.log('Leave Avoid');
+         }
+
+         //val2 = undefined
+         var val2 = Avoid();
+         console.log(val2);
+
+         //取得method的名稱
+         console.log(Get21.name);
+
+         //變數寫法
+         var fuc1 = function(strX)
+         {
+             alert(strX);
+         }
+         fuc1("Hello");
+         console.log(fuc1);
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var num1 =2;
+var num2 = 5.4;
+console.log(num1);
+console.log(num2);
+
+var numText1="011";
+console.log(parseInt(numText1));  //後面無參數時,預設是10進位
+console.log(parseInt(numText1,2));//2進位
+console.log(parseInt(numText1,10)); //10進位
+
+var numText2 = "1.234567";
+console.log(parseFloat(numText2,10));
+console.log(numText2);
+
+console.log(NaN);
+console.log(1/0);
+console.log(isNaN(1));
+console.log(isNaN(1/0));
+console.log(isNaN("aa"));
+
+var num3 = parseFloat("3.14",10);
+console.log(num3);
+
+var num4 = parseFloat("3.1x",10);
+console.log(num4);
+
+var num5 = parseFloat("x",10);
+console.log(num5);
+
+    </script>
+</body>
+</html>

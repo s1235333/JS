@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var aaa = 200;
+        console.log(aaa);
+        console.log(window);
+        console.log(window.aaa); //global等級的會被存取在window
+
+        function fuc1()
+        {
+            var bbb =150;
+
+            console.log(bbb);
+            console.log(window);
+            console.log(window.bbb); //結果會出現undefined,因為bbb是在function內,無法被wondow存取
+        }
+        fuc1();
+
+        console.log(bbb);
+
+    </script>
+</body>
+</html>
