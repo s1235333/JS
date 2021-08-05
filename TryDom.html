@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function btn1_Click()
+        {
+            var inp1 = document.gerElementById("inp1");
+            var val = inp1.value;
+
+             var myDiv = document.getElementById("myDiv");
+             myDiv.innerHTML = val;
+
+             var newDiv = document.createElement("p");
+             newDiv.style="color:red";
+             newDiv.innerText="Hello red text.";
+             //myDiv.appendChild(newDiv);  //加入至最後
+             myDiv.innerHTML = newDiv.outerHTML; //覆蓋
+        }
+    </script>
+
+    <div>
+        輸入數量:
+        <input type="text" id="inp1" value="21"/>
+        <button type="button" id="btn1" onclick="btn1_Click()">點我</button>
+    </div> 
+    <div id="myDiv">
+        -
+        <p style="color:brown;">Hello red text</p>
+    </div>
+
+    <div style="color:deeppink">123</div>
+</body>
+</html>
