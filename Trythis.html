@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> //this指的是目前的擁有者
+
+    //全域變數的this
+    alert("alert"); 
+    window.alert("window.alert");//alert本身是window的method,所以可以正常出現
+    this.alert("this.alert")
+
+    document.alert("document.alert"); 
+    //alert本身不屬於document,所以會出錯,要run時這行要註解掉
+
+    function Exec() //全域方法
+    {
+        console.log(window ==this);
+        
+    }
+
+    Exec();
+    console.log("-----");
+
+    //物件裡的this
+    var car=
+    {
+       color:"Red",
+       Exec:function()
+       {
+           console.log(car ==this);
+           console.log(this.color); //這邊的this便是指car
+       }
+    };
+    car.Exec();
+
+    //js內屬性跟方法可以透過索引值存取
+    //動態指定Method到物件
+    var car2=
+    { Name:"Car2",
+    Exec2:function()
+    {
+        this.Exec();
+
+        console.log(this);
+    }
+
+    };
+    car2["Exec"]=Exec; 
+    //car2.Exec();
+    car2.Eexc2();
+
+
+    //car.this-->window
+    //car2.this-->car2
+    </script>
+</body>
+</html>

@@ -17,7 +17,7 @@
     </div>
     <script>
    //get element by id ,and set innerText
-   var d1 = document.getElementsByID("div1");
+   var d1 = document.getElementById("div1");
        d1.children[2].innerHTML = "123";
     
        //get element by tag , and set color
@@ -26,7 +26,8 @@
  
     for(var i =0;  i< list.length; i++)
     {
-       list[i].style="color:"+colorArr[i % 3]+";";
+        var item=list[i];
+       item.style="color:"+colorArr[i % 3]+";";
        item.onclick = function()
        {
            console.log(i);
